@@ -31,9 +31,6 @@ export default function Header() {
         </nav>
 
         <div className="nav-cta">
-          <a href="#schedule" className="btn btn-ghost">
-            Existing customer
-          </a>
           <a href="#schedule" className="btn btn-primary">
             Get a quote
           </a>
