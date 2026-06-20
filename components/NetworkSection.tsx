@@ -1,3 +1,4 @@
+import FlagBadge from "./FlagBadge";
 import type { Region } from "@/data/regions";
 import type { Partner } from "@/data/partners";
 
@@ -8,6 +9,9 @@ export default function NetworkSection({
   regions: Region[];
   partners: Partner[];
 }) {
+  const total = regions.reduce((sum, r) => sum + (r.count ?? 0), 0);
+  const allReconciled = regions.every((r) => r.status === "confirmed");
+
   return (
     <section id="network" className="panel-bg">
       <div className="wrap">
@@ -21,10 +25,20 @@ export default function NetworkSection({
           </p>
         </div>
 
+        <div className="total-banner">
+          <div className="total-num">{total}+</div>
+          <div className="total-label">
+            airports across the network
+            {!allReconciled && (
+              <FlagBadge>totals pending master-sheet reconciliation</FlagBadge>
+            )}
+          </div>
+        </div>
+
         <div className="partner-row">
           {partners.map((p) => (
             <div className="partner-chip" key={p.name}>
-              {p.name} <span className="src">{p.note}</span>
+              {p.name}
             </div>
           ))}
         </div>
