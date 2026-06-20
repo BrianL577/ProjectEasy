@@ -14,6 +14,8 @@
   --move-soft:#ECE9F7;
   --loyalty:#1E8E4F;
   --loyalty-soft:#E5F4EA;
+  --gourmet:#9C6B1F;
+  --gourmet-soft:#F4ECDC;
   --flag:#B5790A;
   --flag-bg:#FBF1DC;
   --display: 'Poppins', sans-serif;
@@ -94,7 +96,7 @@ header{
 .mobile-panel a{padding:10px 4px; font-weight:500; border-bottom:1px solid var(--panel-line); display:block;}
 
 @media (max-width:860px){
-  .nav-links, .nav-cta .btn-ghost{display:none;}
+  .nav-links{display:none;}
   .menu-btn{display:inline-flex;}
 }
 
@@ -133,7 +135,7 @@ section{padding:84px 0;}
 .section-head p{color:var(--muted); font-size:16px; margin-top:12px;}
 .panel-bg{background:var(--panel); border-top:1px solid var(--panel-line); border-bottom:1px solid var(--panel-line);}
 
-.svc-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+.svc-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:18px;}
 .svc-card{
   border-radius:var(--radius); border:1px solid var(--panel-line); background:#fff;
   padding:24px; cursor:pointer; transition:box-shadow .2s ease, transform .2s ease;
@@ -160,9 +162,20 @@ section{padding:84px 0;}
 .svc-card[data-tag="move"] .svc-name{color:var(--move);}
 .svc-card[data-tag="loyalty"] .svc-icon{background:var(--loyalty-soft); color:var(--loyalty);}
 .svc-card[data-tag="loyalty"] .svc-name{color:var(--loyalty);}
+.svc-card[data-tag="gourmet"] .svc-icon{background:var(--gourmet-soft); color:var(--gourmet);}
+.svc-card[data-tag="gourmet"] .svc-name{color:var(--gourmet);}
 
 @media (max-width:980px){ .svc-grid{grid-template-columns:1fr 1fr;} }
 @media (max-width:560px){ .svc-grid{grid-template-columns:1fr;} }
+
+.total-banner{
+  display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;
+  margin:-10px 0 36px; padding:22px 26px;
+  background:#fff; border:1px solid var(--panel-line); border-radius:var(--radius);
+}
+.total-num{font-family:var(--display); font-weight:800; font-size:40px; color:var(--red); line-height:1;}
+.total-label{font-family:var(--mono); font-size:12.5px; color:var(--muted); letter-spacing:.04em; display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+.total-label .flag{margin-top:0;}
 
 .partner-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px;}
 .partner-chip{
