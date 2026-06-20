@@ -29,6 +29,13 @@ const ICONS: Record<ServiceTag, JSX.Element> = {
       <path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.6 7.1-.6z" />
     </svg>
   ),
+  gourmet: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+      <path d="M7 2v20" />
+      <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+    </svg>
+  ),
 };
 
 export default function ServiceCard({ service }: { service: Service }) {
@@ -51,7 +58,9 @@ export default function ServiceCard({ service }: { service: Service }) {
         <h3>{service.title}</h3>
         <p className="svc-desc">{service.desc}</p>
       </div>
-      {service.status === "draft" && <FlagBadge>draft copy — confirm with Mike</FlagBadge>}
+      {service.status === "draft" && (
+        <FlagBadge>{service.flagNote ?? "draft copy — confirm with Mike"}</FlagBadge>
+      )}
       <div className="svc-toggle">{open ? "− hide details" : "+ what's included"}</div>
       <div className="svc-body">
         <ul>
