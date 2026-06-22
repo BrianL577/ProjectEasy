@@ -53,6 +53,17 @@ export default function WhySection() {
                 </p>
               </div>
             </div>
+            <div className="why-item">
+              <div className="why-num">05</div>
+              <div>
+                <h4>Earn as you fly</h4>
+                <p>
+                  Dedicated customers earn real cash rebates at the end of each
+                  year — not points, not vouchers. The more volume you bring
+                  through easy, the more comes back to you.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
