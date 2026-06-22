@@ -8,20 +8,9 @@ export default function Header() {
   return (
     <header>
       <div className="wrap nav">
-        <div className="logo">
-          <div className="logo-mark">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M3 12L21 5L14 12L21 19L3 12Z" fill="white" />
-            </svg>
-          </div>
-          <div>
-            <div className="logo-word">
-              <span style={{ color: "var(--red)" }}>e</span>
-              <span className="easy">asy</span>
-            </div>
-            <div className="logo-sub">FLIGHT SUPPORT</div>
-          </div>
-        </div>
+        <a href="#" className="logo">
+          <img src="/efs-logo.png" alt="easy flight support" className="logo-img" />
+        </a>
 
         <nav className="nav-links">
           <a href="#network">Network</a>
@@ -50,21 +39,11 @@ export default function Header() {
 
       {open && (
         <div className="wrap mobile-panel" style={{ display: "flex" }}>
-          <a href="#network" onClick={() => setOpen(false)}>
-            Network
-          </a>
-          <a href="#services" onClick={() => setOpen(false)}>
-            Services
-          </a>
-          <a href="#why" onClick={() => setOpen(false)}>
-            Why easy
-          </a>
-          <a href="#loyalty" onClick={() => setOpen(false)}>
-            Loyalty
-          </a>
-          <a href="#schedule" onClick={() => setOpen(false)}>
-            Get a quote
-          </a>
+          <a href="#network" onClick={() => setOpen(false)}>Network</a>
+          <a href="#services" onClick={() => setOpen(false)}>Services</a>
+          <a href="#why" onClick={() => setOpen(false)}>Why easy</a>
+          <a href="#loyalty" onClick={() => setOpen(false)}>Loyalty</a>
+          <a href="#schedule" onClick={() => setOpen(false)}>Get a quote</a>
         </div>
       )}
     </header>
