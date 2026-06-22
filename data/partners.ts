@@ -1,15 +1,10 @@
-// Maps 1:1 onto a future Supabase `partners` table:
-//   columns -> name (text), note (text), verified_on (date), source_url (text)
+// Partner names are confidential — not published on the customer-facing site.
+// This list is intentionally empty until Mike confirms what (if anything) can be disclosed.
+// Maps 1:1 onto a future Supabase `partners` table when ready.
 
 export interface Partner {
   name: string;
   note: string;
 }
 
-export const partners: Partner[] = [
-  { name: "Aviapartner", note: "verified — wikipedia.org" },
-  { name: "dnata", note: "verified — dnata.com" },
-  { name: "Swissport", note: "verified — swissport.com" },
-  { name: "Omni Handling", note: "verified — omnihandling.com" },
-  { name: "GH Italia", note: "verified — ghitalia.it" },
-];
+export const partners: Partner[] = [];
