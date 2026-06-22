@@ -5,28 +5,22 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <div className="foot-grid">
-          <div className="foot-col" style={{ maxWidth: 260 }}>
-            <div className="logo" style={{ marginBottom: 14 }}>
-              <div className="logo-mark" style={{ width: 30, height: 30 }}>
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M3 12L21 5L14 12L21 19L3 12Z" fill="white" />
-                </svg>
-              </div>
-              <div className="logo-word" style={{ fontSize: 17 }}>
-                <span style={{ color: "var(--red)" }}>e</span>
-                <span className="easy">asy</span>
-              </div>
-            </div>
+          <div className="foot-col" style={{ maxWidth: 280 }}>
+            <img
+              src="/efs-logo.png"
+              alt="easy flight support"
+              style={{ height: 36, marginBottom: 16 }}
+            />
             <p style={{ color: "var(--muted)", fontSize: 13.5 }}>
-              Tailor-made fuel and ground handling coordination for aircraft
-              operators — we just make everything easy.
+              Tailor-made fuel, ground handling coordination, and VIP
+              transportation support for aircraft operators — we just make
+              everything easy.
             </p>
           </div>
 
           <div className="foot-col">
             <h5>Network</h5>
             <a href="#network">Coverage by region</a>
-            <a href="#network">Partner directory</a>
           </div>
 
           <div className="foot-col">
