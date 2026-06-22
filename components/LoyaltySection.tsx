@@ -1,3 +1,4 @@
+import FlagBadge from "./FlagBadge";
 import type { Step } from "@/data/steps";
 
 export default function LoyaltySection({ steps }: { steps: Step[] }) {
@@ -14,6 +15,12 @@ export default function LoyaltySection({ steps }: { steps: Step[] }) {
             operators and owners — rebates and credits are earned by dedicated
             customers when fuel and services are coordinated through easy.
           </p>
+          <FlagBadge>
+            verify with Mike — concept is year-end cash rebates proportional to
+            volume (e.g. a commercial operator spending $1M might receive ~$10K
+            back), but exact thresholds and terms need confirmation before
+            publishing
+          </FlagBadge>
         </div>
         <div className="steps">
           {steps.map((s, i) => (
