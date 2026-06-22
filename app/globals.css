@@ -76,16 +76,9 @@ header{
   position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
   backdrop-filter:blur(8px); border-bottom:1px solid var(--panel-line);
 }
-.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+.logo-img{height:44px; width:auto; display:block;}
 .logo{display:flex; align-items:center; gap:10px;}
-.logo-mark{
-  width:38px; height:38px; background:var(--red); border-radius:8px;
-  display:flex; align-items:center; justify-content:center; flex-shrink:0;
-}
-.logo-mark svg{width:20px; height:20px;}
-.logo-word{font-family:var(--display); font-weight:700; font-size:21px; line-height:1;}
-.logo-word .easy{color:var(--ink);}
-.logo-sub{font-family:var(--mono); font-size:9.5px; letter-spacing:.18em; color:var(--muted); margin-top:1px;}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
 .nav-links{display:flex; align-items:center; gap:30px;}
 .nav-links a{font-size:14.5px; font-weight:500; color:var(--ink); opacity:.78;}
 .nav-links a:hover{opacity:1;}
@@ -152,7 +145,15 @@ section{padding:84px 0;}
 .svc-body li{display:flex; gap:8px; align-items:flex-start; font-size:14px;}
 .svc-body li svg{width:14px; height:14px; flex-shrink:0; margin-top:3px;}
 .svc-card.open .svc-body{display:block;}
-.svc-toggle{font-family:var(--mono); font-size:11.5px; display:flex; align-items:center; gap:6px; opacity:.7;}
+.svc-card:hover .svc-body{display:block;}
+.svc-toggle{
+  font-family:var(--mono); font-size:11.5px;
+  display:inline-flex; align-items:center; gap:6px;
+  background:none; border:none; cursor:pointer;
+  color:var(--red); font-weight:600; padding:0;
+  text-align:left;
+}
+.svc-toggle:hover{text-decoration:underline;}
 
 .svc-card[data-tag="fuel"] .svc-icon{background:var(--fuel-soft); color:var(--fuel);}
 .svc-card[data-tag="fuel"] .svc-name{color:var(--fuel);}
