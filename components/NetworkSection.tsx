@@ -4,7 +4,6 @@ import type { Partner } from "@/data/partners";
 
 export default function NetworkSection({
   regions,
-  partners,
 }: {
   regions: Region[];
   partners: Partner[];
@@ -17,11 +16,11 @@ export default function NetworkSection({
       <div className="wrap">
         <div className="section-head">
           <div className="eyebrow">Network</div>
-          <h2>A network built from vetted partners, not a database of guesses.</h2>
+          <h2>A global network, available on request.</h2>
           <p>
-            Every partner below is independently confirmed. Airport-level counts
-            per partner are pulled from the latest verified master list —
-            anything not yet reconciled is marked rather than estimated.
+            We work with a select group of vetted partners across Europe, Africa,
+            the Middle East, and beyond. Partner details are shared directly with
+            customers as part of the quoting process.
           </p>
         </div>
 
@@ -33,14 +32,6 @@ export default function NetworkSection({
               <FlagBadge>totals pending master-sheet reconciliation</FlagBadge>
             )}
           </div>
-        </div>
-
-        <div className="partner-row">
-          {partners.map((p) => (
-            <div className="partner-chip" key={p.name}>
-              {p.name}
-            </div>
-          ))}
         </div>
 
         <div className="region-cards">
