@@ -13,8 +13,6 @@ export interface Service {
   desc: string;
   bullets: string[];
   status: ServiceStatus;
-  /** Optional custom flag text. If omitted on a "draft" service, ServiceCard
-   * falls back to a generic "draft copy — confirm with Mike" badge. */
   flagNote?: string;
 }
 
@@ -22,7 +20,7 @@ export const services: Service[] = [
   {
     slug: "fuel",
     tag: "fuel",
-    name: "EASY FUEL",
+    name: "easy fuel",
     title: "Fuel, simplified",
     desc: "Tailor-made fuel solutions, with full transparency if we can't match or beat a price.",
     bullets: [
@@ -38,7 +36,7 @@ export const services: Service[] = [
   {
     slug: "handling",
     tag: "handling",
-    name: "EASY HANDLING",
+    name: "easy handling",
     title: "Ground handling, coordinated",
     desc: "We arrange handling through our vetted partner network so you don't negotiate each location separately.",
     bullets: [
@@ -51,11 +49,12 @@ export const services: Service[] = [
   {
     slug: "move",
     tag: "move",
-    name: "EASY MOVE",
-    title: "Ground transportation",
-    desc: "A newer service line — coordinated alongside your fuel and handling request.",
+    name: "easy move",
+    title: "VIP transportation",
+    desc: "Ground transportation coordinated alongside your fuel and handling request.",
     bullets: [
-      "Coordinated alongside your fuel & handling request",
+      "Crew and passenger transportation arranged as part of your request",
+      "Coordinated with your fuel and handling to keep operations seamless",
       "Rolling out alongside updated request forms — details to be confirmed",
     ],
     status: "draft",
@@ -64,23 +63,29 @@ export const services: Service[] = [
   {
     slug: "gourmet",
     tag: "gourmet",
-    name: "EASY GOURMET",
+    name: "easy gourmet",
     title: "Gourmet network",
-    desc: "Referenced in easy's own company overview alongside fuel and handling — full service details haven't been confirmed yet.",
-    bullets: ["Full details pending — confirm scope with Mike before publishing"],
+    desc: "A catering and gourmet service referenced in the easy network — full details pending.",
+    bullets: [
+      "Mentioned alongside easy fuel, easy handling, and easy loyalty in company overview",
+      "Full scope to be confirmed with Mike before publishing",
+    ],
     status: "draft",
-    flagNote: "name confirmed in company overview — details pending Mike",
+    flagNote: "Mike unsure about this service — pending decision",
   },
   {
     slug: "loyalty",
     tag: "loyalty",
-    name: "EASY LOYALTY",
+    name: "easy loyalty",
     title: "Rebates that add up",
-    desc: "A fidelity rewards scheme — the more you spend with easy, the more you earn back.",
+    desc: "A fidelity rewards scheme — the more you spend with easy, the more you earn back at year's end.",
     bullets: [
-      "Year-end rebates and cash credits for loyal customers",
+      "Dedicated customers earn rebates and cash credits",
+      "Credits are returned at year's end — real money back, not points or vouchers",
+      "The more volume you bring, the more you earn",
       "No extra paperwork to enroll",
     ],
-    status: "confirmed",
+    status: "draft",
+    flagNote: "verify rebate model with Mike — concept is year-end cash rebates (e.g. a commercial airline spending $1M might receive ~$10K back), but exact thresholds and terms need confirmation before publishing",
   },
 ];
