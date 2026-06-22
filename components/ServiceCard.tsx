@@ -45,12 +45,6 @@ export default function ServiceCard({ service }: { service: Service }) {
     <div
       className={`svc-card ${open ? "open" : ""}`}
       data-tag={service.tag}
-      onClick={() => setOpen((v) => !v)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") setOpen((v) => !v);
-      }}
     >
       <div className="svc-icon">{ICONS[service.tag]}</div>
       <div>
@@ -61,7 +55,13 @@ export default function ServiceCard({ service }: { service: Service }) {
       {service.status === "draft" && (
         <FlagBadge>{service.flagNote ?? "draft copy — confirm with Mike"}</FlagBadge>
       )}
-      <div className="svc-toggle">{open ? "− hide details" : "+ what's included"}</div>
+      <button
+        className="svc-toggle"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+      >
+        {open ? "− hide details" : "+ click to see more"}
+      </button>
       <div className="svc-body">
         <ul>
           {service.bullets.map((b) => (
